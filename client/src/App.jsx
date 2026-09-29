@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react';
 import {Routes,Route,NavLink,Link,useLocation} from 'react-router-dom';
 import pages from './pages.json';
 import Calculator from './Calculators.jsx';
-const CFG={owner:'PJVerse',contact:'hello@example.com',...(window.__CFG__||{})};
+const CFG={owner:'PJVerse',contact:'pranalijagadale77@gmail.com',...(window.__CFG__||{})};
 const sub=h=>h.replaceAll('{{OWNER}}',CFG.owner).replaceAll('{{CONTACT}}',CFG.contact);
 const Html=({h})=><div dangerouslySetInnerHTML={{__html:sub(h)}}/>;
 const NAMES={age:'Age',on:'Age on Date',diff:'Age Difference',dd:'Date Difference',bd:'Birthday',lp:'Leap Year',add:'Add/Subtract Days',pl:'Planets'};
@@ -22,7 +22,7 @@ export default function App(){
  useEffect(()=>{if(dark!==null)document.documentElement.dataset.theme=dark?'dark':'light'},[dark]);
  const {calcs,guides,statics}=pages,age=calcs[0],links=[...calcs.map(c=>[c.path,c.h1.split(':')[0]]),...guides.map(g=>[g.path,g.title]),...statics.map(s=>[s.path,s.title])];
  return <div className="w">
-  <header><Link className="logo" to="/age-calculator">🎂 AgeNest</Link><button className="tg" aria-label="Toggle dark mode" onClick={()=>setDark(d=>d===null?!matchMedia('(prefers-color-scheme: dark)').matches:!d)}>🌙</button></header>
+  <header><Link className="logo" to="/">🎂 AgeNest</Link><button className="tg" aria-label="Toggle dark mode" onClick={()=>setDark(d=>d===null?!matchMedia('(prefers-color-scheme: dark)').matches:!d)}>🌙</button></header>
   <nav aria-label="Calculators">{calcs.map(c=><NavLink key={c.path} to={c.path}>{NAMES[c.tab]}</NavLink>)}</nav>
   <Routes>
    <Route path="/" element={<CalcPage p={age}/>}/>
