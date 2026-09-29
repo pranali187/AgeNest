@@ -22,7 +22,7 @@ export default function App(){
  useEffect(()=>{if(dark!==null)document.documentElement.dataset.theme=dark?'dark':'light'},[dark]);
  const {calcs,guides,statics}=pages,age=calcs[0],links=[...calcs.map(c=>[c.path,c.h1.split(':')[0]]),...guides.map(g=>[g.path,g.title]),...statics.map(s=>[s.path,s.title])];
  return <div className="w">
-  <header><Link className="logo" to="/age-calculator">🎂 AgeNest</Link><button className="tg" aria-label="Toggle dark mode" onClick={()=>setDark(d=>d===null?!matchMedia('(prefers-color-scheme: dark)').matches:!d)}>🌙</button></header>
+  <header><Link className="logo" to="/">🎂 AgeNest</Link><button className="tg" aria-label="Toggle dark mode" onClick={()=>setDark(d=>d===null?!matchMedia('(prefers-color-scheme: dark)').matches:!d)}>🌙</button></header>
   <nav aria-label="Calculators">{calcs.map(c=><NavLink key={c.path} to={c.path}>{NAMES[c.tab]}</NavLink>)}</nav>
   <Routes>
    <Route path="/" element={<CalcPage p={age}/>}/>
