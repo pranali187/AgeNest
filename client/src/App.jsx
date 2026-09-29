@@ -6,7 +6,7 @@ const CFG={owner:'PJVerse',contact:'pranalijagadale77@gmail.com',...(window.__CF
 const sub=h=>h.replaceAll('{{OWNER}}',CFG.owner).replaceAll('{{CONTACT}}',CFG.contact);
 const Html=({h})=><div dangerouslySetInnerHTML={{__html:sub(h)}}/>;
 const NAMES={age:'Age',on:'Age on Date',diff:'Age Difference',dd:'Date Difference',bd:'Birthday',lp:'Leap Year',add:'Add/Subtract Days',pl:'Planets'};
-function setMeta(title,desc){document.title=title;let m=document.querySelector('meta[name=description]');if(!m){m=document.createElement('meta');m.name='description';document.head.appendChild(m)}if(desc)m.content=desc}
+function setMeta(t,d){document.title=t;let m=document.querySelector('meta[name="description"]');m||(m=document.createElement('meta'),m.name='description',document.head.appendChild(m));d&&(m.content=d);let c=document.querySelector('link[rel="canonical"]');c||(c=document.createElement('link'),c.rel='canonical',document.head.appendChild(c));c.href=window.location.origin+window.location.pathname}
 function useHit(){const {pathname}=useLocation();useEffect(()=>{window.scrollTo(0,0);fetch('/api/hit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({path:pathname})}).catch(()=>{})},[pathname])}
 function CalcPage({p}){useEffect(()=>setMeta(p.title,p.desc),[p]);
  return <main><h1>{p.h1}</h1><p className="lead">{p.lead}</p><Calculator tab={p.tab}/>
