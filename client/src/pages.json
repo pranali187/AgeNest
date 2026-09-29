@@ -1,0 +1,179 @@
+{
+ "calcs": [
+  {
+   "path": "/age-calculator",
+   "tab": "age",
+   "title": "Age Calculator: How Old Am I? Exact Age by Date of Birth",
+   "desc": "Free age calculator: find how old you are in years, months and days, total days lived, day of birth and next birthday. Private, runs in your browser.",
+   "h1": "Age Calculator: How Old Am I?",
+   "lead": "Enter your date of birth to see your exact age, how many days you have lived, the weekday you were born and when your next birthday is.",
+   "body": "<h2>How to calculate age from date of birth</h2><p>Take today's date and subtract your date of birth in three steps. First subtract the years. Then subtract the months. Finally subtract the days. If the day difference is negative, borrow the number of days in the previous month and reduce the month count by one. If the month difference is negative, borrow 12 months from the years.</p><h2>Examples</h2><table><tr><td>15 Mar 2001 → 29 Sep 2026</td><td>25 years, 6 months, 14 days</td></tr><tr><td>31 Jan 2001 → 28 Feb 2001</td><td>0 years, 0 months, 28 days</td></tr><tr><td>29 Feb 2000 → 28 Feb 2001</td><td>1 year (birthday counted on Feb 28)</td></tr></table><h2>How old am I in days, weeks and hours?</h2><p>Years, months and days follow the calendar. Total days, weeks, hours and seconds are exact counts of elapsed time since midnight on your birth date, so they are the best answer to \"how many days old am I?\". Hours, minutes and seconds use your device's local time.</p><h2>Date-of-birth facts</h2><p>Your date of birth also tells you the weekday you were born, its day number in the year (1 to 366) and its ISO week number (1 to 53). The calculator shows all three, plus whether your birth year was a leap year.</p><h2>Leap years and February 29</h2><p>Leap years add Feb 29 so the calendar stays aligned with Earth's orbit. If you were born on Feb 29, this site treats Feb 28 as your birthday in non-leap years. Some places use Mar 1 instead, so the rule is stated here to keep results predictable.</p><p>Need something more specific? Try <a href=\"/age-on-specific-date\">age on a specific date</a>, the <a href=\"/birthday-calculator\">birthday calculator</a> or the <a href=\"/age-difference-calculator\">age difference calculator</a>.</p>",
+   "faq": [
+    [
+     "How old am I in days?",
+     "Enter your date of birth. The Total days card gives an exact count from your birth date to today."
+    ],
+    [
+     "How are leap years handled?",
+     "Real month lengths are used, including Feb 29 in leap years."
+    ],
+    [
+     "What about Feb 29 birthdays?",
+     "In non-leap years the birthday is treated as Feb 28."
+    ],
+    [
+     "Is my date of birth stored?",
+     "No. It is processed locally in your browser and never sent to a server."
+    ]
+   ]
+  },
+  {
+   "path": "/age-on-specific-date",
+   "tab": "on",
+   "title": "Age on a Specific Date (Cut-off Date Calculator)",
+   "desc": "Find exact age on any past or future date, ideal for exam and form eligibility cut-off dates.",
+   "h1": "Age on a Specific Date",
+   "lead": "Calculate age as on any date. Set your DOB and the cut-off date, for example 1 January.",
+   "body": "<h2>Age as on a cut-off date</h2><p>Recruitment exams, entrance tests and application forms often say \"age as on 1 January\" or \"as on the closing date\". That means your age is measured on that exact date, not today. Enter your date of birth and set the target date to the cut-off.</p><h2>Example</h2><p>Date of birth 10 Aug 2001, cut-off 1 Jan 2026: 24 years, 4 months, 22 days. So a rule of \"minimum 25 years\" would not be met on that date.</p><h2>Past and future dates</h2><p>The same tool shows how old you were on any past date, or how old you will be in 2030 or any future year. Always check the official notification for how a cut-off is defined, since some rules count completed years only or add relaxations for certain categories.</p>",
+   "faq": [
+    [
+     "Can I use a future date?",
+     "Yes, for example to see how old you will be in 2030."
+    ],
+    [
+     "Does this follow official exam rules?",
+     "It gives the exact age on a date. Always confirm how your notification counts age."
+    ]
+   ]
+  },
+  {
+   "path": "/age-difference-calculator",
+   "tab": "diff",
+   "title": "Age Difference Calculator",
+   "desc": "Exact age difference between two people in years, months, days and total days.",
+   "h1": "Age Difference Calculator",
+   "lead": "Enter two dates of birth to see the exact gap between them.",
+   "body": "<h2>How age difference is calculated</h2><p>Put the two birth dates in order, then subtract the earlier from the later in years, months and days, borrowing month lengths where needed. The total-days figure counts the exact days between the two dates.</p><h2>Example</h2><p>Born 15 Mar 2001 and 2 Jul 2004: 3 years, 3 months, 17 days, which is 1,205 days.</p><p>Read more in our guide to <a href=\"/guides/age-difference-examples\">age difference examples</a>.</p>",
+   "faq": [
+    [
+     "Who is older?",
+     "The result states which person is older."
+    ]
+   ]
+  },
+  {
+   "path": "/date-difference-calculator",
+   "tab": "dd",
+   "title": "Date Difference Calculator: Days Between Dates",
+   "desc": "Days, weeks, months and years between two dates.",
+   "h1": "Date Difference Calculator",
+   "lead": "Find the time between any two dates in days, weeks, months and years.",
+   "body": "<h2>Days, weeks, months and years between dates</h2><p>Enter any two dates, in either order. The result shows the gap as years, months and days, plus totals in days and weeks. The end date is not counted as an extra day: 1 Jan to 2 Jan is 1 day.</p><h2>Notes</h2><p>Month and year counts are calendar-based, so a month can be 28 to 31 days. The decimal-years figure divides total days by 365.25 and is only an approximation.</p>",
+   "faq": [
+    [
+     "Is the end date included?",
+     "No, it counts the gap between the two dates."
+    ]
+   ]
+  },
+  {
+   "path": "/birthday-calculator",
+   "tab": "bd",
+   "title": "Birthday Calculator: Days Until Your Birthday",
+   "desc": "Days until your next birthday, previous birthday date and weekday.",
+   "h1": "Birthday Calculator",
+   "lead": "See when your next birthday is, how many days remain and the age you will turn.",
+   "body": "<h2>Days until your next birthday</h2><p>The calculator finds your next and previous birthday, the weekday they fall on, how many days remain and the age you will turn. On your birthday it shows 0 days.</p><h2>Feb 29 birthdays</h2><p>Leaplings have a real birthday only in leap years. In other years this site shows Feb 28. See <a href=\"/guides/leap-day-birthdays\">our guide to leap-day birthdays</a>.</p>",
+   "faq": [
+    [
+     "How do I count days to my birthday?",
+     "Enter your DOB. The Days until card shows the count."
+    ]
+   ]
+  },
+  {
+   "path": "/leap-year-calculator",
+   "tab": "lp",
+   "title": "Leap Year Calculator: Is It a Leap Year?",
+   "desc": "Check whether any year is a leap year and see the rule that applies.",
+   "h1": "Leap Year Calculator",
+   "lead": "Enter a year to check if it is a leap year and why.",
+   "body": "<h2>The leap year rule</h2><p>A year is a leap year if it is divisible by 4, except century years, which must also be divisible by 400. So 1900 and 2100 are not leap years, while 2000 and 2024 are.</p><h2>Why it exists</h2><p>Earth takes about 365.2422 days to orbit the Sun. Adding a day roughly every four years, and skipping it for most century years, keeps the calendar aligned with the seasons.</p>",
+   "faq": [
+    [
+     "Is 2100 a leap year?",
+     "No. It is divisible by 100 but not 400."
+    ]
+   ]
+  },
+  {
+   "path": "/add-subtract-days-calculator",
+   "tab": "add",
+   "title": "Add or Subtract Days from a Date",
+   "desc": "Find the date N days from a start date, with weekday.",
+   "h1": "Add or Subtract Days from a Date",
+   "lead": "Add or subtract any number of days and see the resulting date.",
+   "body": "<h2>Add or subtract days</h2><p>Choose a start date, enter a number of days and pick add or subtract. The result includes the weekday. Examples: 30 days after 1 Jan is 31 Jan; 90 days after 1 Jan 2026 is 1 Apr 2026.</p><h2>Common uses</h2><p>Due dates, notice periods, warranty and return windows, and project deadlines. Check whether your rule counts calendar days or business days, because this tool counts calendar days.</p>",
+   "faq": [
+    [
+     "Can I go back in time?",
+     "Yes, choose Subtract."
+    ]
+   ]
+  },
+  {
+   "path": "/planetary-age-calculator",
+   "tab": "pl",
+   "title": "Planetary Age Calculator (Orbital Years)",
+   "desc": "Your age in orbital years of Mercury, Venus, Mars, Jupiter and Saturn.",
+   "h1": "Planetary Age Calculator",
+   "lead": "See how many orbits of other planets you have lived. This is an orbital-year conversion, not biological age.",
+   "body": "<h2>Orbital years, not biological age</h2><p>Your age in Earth years is divided by how long each planet takes to orbit the Sun. Mars takes about 1.88 Earth years, so a 30-year-old has completed about 16 Martian years. This is a fun conversion of elapsed time. It says nothing about how you age.</p>",
+   "faq": [
+    [
+     "Is this my real age?",
+     "No. It only converts elapsed time into other planets' years."
+    ]
+   ]
+  }
+ ],
+ "guides": [
+  {
+   "path": "/guides/how-to-calculate-age",
+   "title": "How to Calculate Age from Date of Birth",
+   "body": "<h2>The quick method</h2><p>Subtract the birth year from the current year. Then compare the month and day. If this year's birthday has not happened yet, subtract one year.</p><h2>Getting months and days</h2><p>Subtract the birth month from the current month, and the birth day from the current day. If the days are negative, add the number of days in the previous month and take one away from the months. If the months are negative, add 12 and take one away from the years.</p><h2>Worked example</h2><p>Birth date 15 Mar 2001, today 29 Sep 2026. Years: 2026 − 2001 = 25. Months: 9 − 3 = 6. Days: 29 − 15 = 14. Answer: 25 years, 6 months, 14 days.</p><h2>A trickier case</h2><p>Birth date 31 Jan 2001, today 28 Feb 2001. Days: 28 − 31 = −3, so borrow the 31 days of January: 28 days. Months drop from 1 to 0. Answer: 0 years, 0 months, 28 days.</p><h2>Common mistakes</h2><p>Dividing total days by 365 gives the wrong answer because of leap years. Parsing dates as timestamps can shift the date by a day in some timezones. Ignoring month lengths causes errors near month ends. This site avoids all three by working with plain calendar dates.</p>"
+  },
+  {
+   "path": "/guides/leap-day-birthdays",
+   "title": "Birthdays on February 29",
+   "body": "<h2>Why leap years exist</h2><p>A solar year lasts about 365.2422 days. A leap day every four years keeps the calendar aligned with the seasons. Century years are skipped unless divisible by 400, so 1900 was not a leap year but 2000 was.</p><h2>What happens if you are born on Feb 29?</h2><p>You have a true birthday only in leap years. Roughly one in 1,461 people is born on Feb 29. In other years, some countries and organizations treat Feb 28 as the legal birthday and others use Mar 1.</p><h2>The rule used here</h2><p>AgeNest counts Feb 28 as the birthday in non-leap years. A person born on 29 Feb 2000 is exactly 1 year old on 28 Feb 2001 and 1 year, 0 months, 1 day on 1 Mar 2001.</p><h2>Checking a year</h2><p>Use the leap year calculator to test any year and see which rule applies.</p>"
+  },
+  {
+   "path": "/guides/age-difference-examples",
+   "title": "Age Difference Examples",
+   "body": "<h2>How to find an age difference</h2><p>Order the two dates of birth, then subtract the earlier one from the later one in years, months and days. Use total days when you need an exact count.</p><h2>Example 1: siblings</h2><p>Born 15 Mar 2001 and 2 Jul 2004. Years: 3. Months: 3. Days: 17. Difference: 3 years, 3 months, 17 days, which is 1,205 days.</p><h2>Example 2: partners</h2><p>Born 10 Nov 1990 and 25 Jan 1994. Difference: 3 years, 2 months, 15 days.</p><h2>Does the difference change over time?</h2><p>The gap in years, months and days stays the same, but the ratio between ages changes. A 5-year gap is huge at ages 5 and 10, and small at 50 and 55.</p>"
+  }
+ ],
+ "statics": [
+  {
+   "path": "/about",
+   "title": "About Us",
+   "body": "<p>AgeNest is a free set of age and date calculators built and maintained by {{OWNER}}. The goal is simple: fast, accurate, private tools that work well on a phone and don't ask for personal details.</p><h2>How it works</h2><p>All calculations run in your browser using plain calendar dates. Results are checked with an automated test suite covering leap years, month-end cases and the Feb 29 rule.</p><h2>Corrections</h2><p>Found a wrong result or an unclear explanation? Please email {{CONTACT}} with the dates you entered and we will investigate.</p>"
+  },
+  {
+   "path": "/privacy",
+   "title": "Privacy Policy",
+   "body": "<p>Your date of birth is processed locally in your browser. It is not sent to our servers and not stored by us. No name, email or phone number is required.</p><h2>Analytics and advertising</h2><p>We may use privacy-friendly, cookie-free analytics that record page views only, never dates you enter. If we show Google AdSense ads, Google and its partners may use cookies to serve and measure ads. Where the law requires it, we ask for your consent first, and you can decline.</p><h2>Shared links</h2><p>If you use \"Copy link\", the date you entered is placed in the link. Anyone with the link can see it.</p><h2>Contact</h2><p>Questions about privacy: {{CONTACT}}.</p>"
+  },
+  {
+   "path": "/terms",
+   "title": "Terms of Use",
+   "body": "<p>Results are for general information. They may differ from legal or official age calculations, so check official rules for exams, contracts or legal matters. The site is provided as is, without warranty. By using it you agree these terms may be updated.</p><p>Owner: {{OWNER}}.</p>"
+  },
+  {
+   "path": "/contact",
+   "title": "Contact",
+   "body": "<p>Email: <a href=\"mailto:{{CONTACT}}\">{{CONTACT}}</a></p><p>Send bug reports, wrong results, content suggestions or partnership enquiries. Please do not include personal details you do not want shared.</p>"
+  }
+ ]
+}
