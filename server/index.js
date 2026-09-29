@@ -38,9 +38,10 @@ app.use(express.static(dist,{index:false,maxAge:'1h'}));
 const ld=p=>p.kind==='calc'?`<script type="application/ld+json">${JSON.stringify([{'@context':'https://schema.org','@type':'FAQPage',mainEntity:p.faq.map(([q,a])=>({'@type':'Question',name:q,acceptedAnswer:{'@type':'Answer',text:a}}))},{'@context':'https://schema.org','@type':'WebApplication',name:p.h1,url:SITE+p.path,applicationCategory:'UtilitiesApplication',operatingSystem:'Any',offers:{'@type':'Offer',price:'0',priceCurrency:'USD'}}]).replace(/</g,'\\u003c')}</script>`:'';
 app.get('*',(req,res)=>{
  let file;try{file=fs.readFileSync(path.join(dist,'index.html'),'utf8')}catch{return res.status(500).send('Run "npm run build" first.')}
- const url=req.path.replace(/(.)\/+$/,'$1'),p=all.find(x=>x.path===(url==='/'?'/age-calculator':url));
- const title=p?p.title:'Page not found | AgeNest',desc=p?p.desc:'',canon=SITE+(p?p.path:'/age-calculator');
+ const url=req.path.replace(/(.)\/+$/,'$1'),p=all.find(x=>x.path===url)||all.find(x=>x.path==='/age-calculator');
+ const title=p?p.title:'Page not found | AgeNest',desc=p?p.desc:'',canon=SITE+(url==='/'?'/':p?p.path:'/age-calculator');
  const meta=`<meta name="description" content="${esc(desc)}"><link rel="canonical" href="${canon}"><meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${canon}"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#6c4cf5"><script>window.__CFG__=${JSON.stringify(CFG).replace(/</g,'\\u003c')}</script>${p?ld(p):''}`;
  const app_=p?`<h1>${esc(p.h1)}</h1>${p.lead?`<p>${esc(p.lead)}</p>`:''}${sub(p.body)}`:'';
- res.status(p?200:404).send(file.replace(/<title>.*?<\/title>/,`<title>${esc(title)}</title>`).replace('<!--META-->',()=>meta).replace('<!--APP-->',()=>app_))});
+ res.status(p?200:404).send(file.replace(/<title>.*?<\/title>/,`<title>${esc(title)}</title>`).replace('<!--META-->',()=>meta).replace('<!--APP-->',()=>app_))
+});
 app.listen(PORT,()=>console.log(`AgeNest running on ${SITE} (port ${PORT})`));

@@ -6,7 +6,7 @@ const CFG={owner:'PJVerse',contact:'pranalijagadale77@gmail.com',...(window.__CF
 const sub=h=>h.replaceAll('{{OWNER}}',CFG.owner).replaceAll('{{CONTACT}}',CFG.contact);
 const Html=({h})=><div dangerouslySetInnerHTML={{__html:sub(h)}}/>;
 const NAMES={age:'Age',on:'Age on Date',diff:'Age Difference',dd:'Date Difference',bd:'Birthday',lp:'Leap Year',add:'Add/Subtract Days',pl:'Planets'};
-function setMeta(t,d){document.title=t;let m=document.querySelector('meta[name="description"]');m||(m=document.createElement('meta'),m.name='description',document.head.appendChild(m));d&&(m.content=d);let c=document.querySelector('link[rel="canonical"]');c||(c=document.createElement('link'),c.rel='canonical',document.head.appendChild(c));c.href=window.location.origin+window.location.pathname}
+function setMeta(title,desc){document.title=title;let m=document.querySelector('meta[name=description]');if(!m){m=document.createElement('meta');m.name='description';document.head.appendChild(m)}if(desc)m.content=desc}
 function useHit(){const {pathname}=useLocation();useEffect(()=>{window.scrollTo(0,0);fetch('/api/hit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({path:pathname})}).catch(()=>{})},[pathname])}
 function CalcPage({p}){useEffect(()=>setMeta(p.title,p.desc),[p]);
  return <main><h1>{p.h1}</h1><p className="lead">{p.lead}</p><Calculator tab={p.tab}/>
@@ -22,7 +22,7 @@ export default function App(){
  useEffect(()=>{if(dark!==null)document.documentElement.dataset.theme=dark?'dark':'light'},[dark]);
  const {calcs,guides,statics}=pages,age=calcs[0],links=[...calcs.map(c=>[c.path,c.h1.split(':')[0]]),...guides.map(g=>[g.path,g.title]),...statics.map(s=>[s.path,s.title])];
  return <div className="w">
-  <header><Link className="logo" to="/">🎂 AgeNest</Link><button className="tg" aria-label="Toggle dark mode" onClick={()=>setDark(d=>d===null?!matchMedia('(prefers-color-scheme: dark)').matches:!d)}>🌙</button></header>
+  <header><Link className="logo" to="/age-calculator">🎂 AgeNest</Link><button className="tg" aria-label="Toggle dark mode" onClick={()=>setDark(d=>d===null?!matchMedia('(prefers-color-scheme: dark)').matches:!d)}>🌙</button></header>
   <nav aria-label="Calculators">{calcs.map(c=><NavLink key={c.path} to={c.path}>{NAMES[c.tab]}</NavLink>)}</nav>
   <Routes>
    <Route path="/" element={<CalcPage p={age}/>}/>
